@@ -5,8 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import static com.primus.lee.testchat.R.id.button;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +35,25 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-            Intent intent = new Intent( this, ChatActivity.class);
-            startActivity(intent);
+            //Intent intent = new Intent( this, ChatActivity.class);
+            //startActivity(intent);
 
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onClick( View v){
+        switch ( v.getId() )
+        {
+            case button:
+                //Toast.makeText(this.getApplicationContext(), "터치", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                break;
+        }
+
+     }
 }

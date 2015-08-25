@@ -22,7 +22,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:id="@+id/dynamicArea"
-            android:gravity="bottom"></LinearLayout>
+            android:gravity="bottom">
+
+        </LinearLayout>
     </RelativeLayout>
 
     <LinearLayout
@@ -37,9 +39,12 @@
 
         <EditText
             android:layout_width="500dp"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:id="@+id/editText"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:singleLine="false"
+            android:autoText="true"
+            android:autoLink="none" />
 
         <Button
             android:layout_width="wrap_content"
